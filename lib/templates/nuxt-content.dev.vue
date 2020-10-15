@@ -71,6 +71,7 @@ export default {
       if (this.isEditing) {
         await this.saveFile()
         this.isEditing = false
+        this.$emit('changed')
         return
       }
       // Start editing mode
